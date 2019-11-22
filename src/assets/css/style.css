@@ -1,0 +1,138 @@
+/*通用弹出样式*/
+.ol-popup-big {  
+        position: absolute;
+        z-index: 560;
+        width: 360px;
+        height: 140px;
+        left: -173px;
+        top: -168px;
+        background: #fff; 
+        border-left: 1px solid #b3b3b3;
+        border-right: 1px solid #b3b3b3;
+        border-top: 1px solid #b3b3b3;
+        border-bottom: 1px solid #b3b3b3;
+        box-shadow:0px 1px 10px rgba(0,0,0,0.29);
+        -moz-box-shadow:0 1px 10px rgba(0,0,0,.29);
+        -webkit-box-shadow:0 1px 10px rgba(0,0,0,.29);
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));  
+      }
+      .ol-popup-big:after, .ol-popup-big:before {  
+        top: 100%;  
+        border: solid transparent;  
+        content: " ";  
+        height: 0;  
+        width: 0;  
+        position: absolute;  
+        pointer-events: none;  
+      }  
+      .ol-popup-big:after {  
+        border-top-color: white;  
+        border-width: 10px;  
+        left: 170px;  
+        margin-left: -10px;  
+      }  
+      .ol-popup-big:before {  
+        border-top-color: #cccccc;  
+        border-width: 11px;  
+        left: 170px;  
+        margin-left: -11px;  
+      }  
+      .ol-popup-closer {  
+        text-decoration: none;  
+        position: absolute;  
+        top: 12px;  
+        right: 12px;  
+      }  
+      .ol-popup-closer:after {  
+        content: "✖";  
+      }  
+
+.popup-body
+{
+    position: absolute;
+    top: 34px;
+    left: 0px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 214px;
+    width: 384px;
+    visibility: visible;
+    display: block;
+}
+/*弹出格式*/
+/*新击位置，以此为起点终点*/
+.tdt_info
+{
+    font-family: "宋体";
+    font-size: 12px;
+    width: 340px;
+    -webkit-user-select: initial;
+    -moz-user-select: text;
+}
+.tdt_info_top {
+    width: 340px;
+    height: 5px;
+}
+.tdt_info_con {
+
+    width: 340px;
+    padding: 10px 10px 9px 10px;
+
+}
+.tdt_info_t_d {
+    border-bottom: 2px solid #1b1b1b;
+    height: 24px;
+}
+.tdt_i_t {
+    float: left;
+    display: inline;
+    width: 180px;
+    margin-left: 2px;
+}
+.tdt_i_t span {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+    display: block;
+    float: left;
+}
+ .popup-title
+{
+    position: absolute;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    z-index: 16;
+    width: 280px;
+}
+.tdt_e {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0 3px 0 3px;
+}
+.tdt_close {
+    float: right;
+    display: inline;
+    cursor: pointer;
+    width: 14px;
+    height: 13px;
+    position: absolute;
+    right: 11px;
+    top: 17px;
+}
+
+.tdt_c_d {
+    margin-top: 10px;
+    height:53px;
+}
+
+.b_n {
+    height: 18px;
+    border-bottom: 1px solid #cccccc;
+
+}
+.b_n li {
+    float: left;
+    display: inline;
+    height: 18px;
+}
