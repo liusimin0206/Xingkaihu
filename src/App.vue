@@ -100,7 +100,6 @@ export default {
   },
   computed: {
     currentTable() {
-      console.log(this.$route);
       return this.$route.query.currentTable;
     }
   },
@@ -124,7 +123,6 @@ export default {
           }
         });
       }
-      // this.$store.commit("changeActiveTable", tableName);
     }
   }
 };
@@ -157,6 +155,8 @@ export default {
       display: inline-block;
     }
     .right {
+      display: flex;
+      flex-direction: column;
       box-sizing: border-box;
       width: 100%;
       height: 100%;

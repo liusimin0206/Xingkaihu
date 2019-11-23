@@ -16,9 +16,9 @@ import View from "ol/View";
 import Tile from "ol/layer/Tile";
 import XYZ from "ol/source/XYZ";
 
-import { defaults as defaultControls } from "ol/control";
+import { defaults as defaultControls, ScaleLine } from "ol/control";
 import MousePosition from "ol/control/MousePosition";
-import ScaleLine from "ol/control/ScaleLine";
+// import ScaleLine from "ol/control/ScaleLine";
 import Feature from "ol/Feature";
 import Vector from "ol/layer/Vector";
 import SourceVector from "ol/source/Vector";
@@ -50,7 +50,6 @@ export default {
     }
   },
   mounted() {
-    // // eslint-disable-next-line no-undef
     this.init();
   },
   methods: {
@@ -81,7 +80,7 @@ export default {
       });
 
       this.view = new View({
-        extent: [131.8, 44.94, 133.69, 45.78],
+        extent: [129.8, 43.94, 134.69, 46.78],
         projection: "EPSG:4326",
         center: [132.39, 44.94],
         zoom: 10,
@@ -182,7 +181,7 @@ export default {
     // },
     DegreeConvertBack(value) {
       var du = value.split("°")[0];
-      console.log(du);
+      // console.log(du);
       var fen = value.split("°")[1].split("′")[0];
       var miao = value
         .split("°")[1]
@@ -299,6 +298,9 @@ export default {
 @import "../assets/css/style.css";
 @import "../assets/ol/ol.css";
 .showMap {
+  box-sizing: border-box;
+  width: 100%;
+  /* padding-top: -60px; */
   height: 100%;
 }
 #map {

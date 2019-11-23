@@ -73,7 +73,7 @@ export default {
           let arr = res.data;
           for (let i = 0; i < arr.length; i++) {
             this.tableData.push(arr[i].value);
-            console.log(this.tableData);
+            // console.log(this.tableData);
           }
         });
     },

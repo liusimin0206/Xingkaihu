@@ -34,7 +34,7 @@ module.exports = {
             res.end(data);
           });
         } else if (url.indexOf("overlay") !== -1) {
-          console.log(url);
+          // console.log(url);
           fs.readFile(`mock${url}`, function(err, data) {
             res.writeHead(200, { "Content-Type": "image/png" });
             res.end(data);

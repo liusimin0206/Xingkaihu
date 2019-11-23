@@ -1,5 +1,5 @@
 <template>
-  <div class="home">pagename:{{ this.$store.state.activeTable }}</div>
+  <div class="home">pagename:{{ this.currentTable }}</div>
 </template>
 
 <script>
@@ -10,8 +10,11 @@ export default {
   data() {
     return {};
   },
-  created() {
-    this.$store.commit("changeActiveTable", "首页");
+  created() {},
+  computed: {
+    currentTable() {
+      return this.$route.query.currentTable;
+    }
   }
 };
 </script>
