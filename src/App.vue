@@ -29,13 +29,11 @@
         </el-menu>
       </el-aside>
       <div class="right">
-        <div class="seconde-header-wrapper">
-          <Main
-            class="second-header"
-            :currentTable="currentTable"
-            v-if="this.$route.name !== 'home'"
-          ></Main>
-        </div>
+        <Main
+          class="second-header"
+          :currentTable="currentTable"
+          v-if="this.$route.name !== 'home'"
+        ></Main>
 
         <router-view />
       </div>
@@ -104,6 +102,7 @@ export default {
     }
   },
   created() {},
+
   methods: {
     changeTable(tableName) {
       if (tableName == "首页") {
@@ -155,19 +154,14 @@ export default {
       display: inline-block;
     }
     .right {
-      display: flex;
-      flex-direction: column;
       box-sizing: border-box;
       width: 100%;
       height: 100%;
       padding-left: 300px;
-      .seconde-header-wrapper {
-        height: 60px;
-        .second-header {
-          position: fixed;
-          z-index: 9;
-          width: 100%;
-        }
+      .second-header {
+        position: fixed;
+        z-index: 9;
+        width: 100%;
       }
     }
   }

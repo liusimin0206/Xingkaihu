@@ -51,6 +51,17 @@ export default {
   },
   mounted() {
     this.init();
+    console.log(this.map);
+  },
+  watch: {
+    // 方法1
+    $route(to, from) {
+      //监听路由是否变化
+      if (to.path == "/showMap" && from.path == "/showMap") {
+        // location.href =
+      }
+      //获取文章数据
+    }
   },
   methods: {
     init() {
@@ -302,6 +313,8 @@ export default {
   width: 100%;
   /* padding-top: -60px; */
   height: 100%;
+  /* margin-top: -60px; */
+  padding-top: 60px;
 }
 #map {
   height: 100%;
