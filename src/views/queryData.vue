@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="queryData">
     queryData + {{ activeTable }}
     <div>
       <el-select v-model="queryField" filterable multiple placeholder="请选择">
@@ -134,20 +134,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.queryForm {
-  // width: 300px;
-  // margin: 0 auto;
+.queryData {
+  box-sizing: border-box;
+  width: 100%;
+  /* padding-top: -60px; */
 
-  display: flex;
-  justify-content: flex-end;
+  /* margin-top: -60px; */
+  padding-top: 60px;
+  .queryForm {
+    // width: 300px;
+    // margin: 0 auto;
 
-  .queryItem {
     display: flex;
-  }
-  #queryButton {
-    // float: right;
-    height: 40px;
-    margin-left: 50px;
+    justify-content: flex-end;
+
+    .queryItem {
+      display: flex;
+    }
+    #queryButton {
+      // float: right;
+      height: 40px;
+      margin-left: 50px;
+    }
   }
 }
 </style>

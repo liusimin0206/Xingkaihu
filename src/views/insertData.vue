@@ -1,5 +1,5 @@
 <template>
-  <div id="insertData">
+  <div class="insertData">
     <h1>insertData +{{ activeTable }}</h1>
     <div id="dataUpload">
       <div>
@@ -252,14 +252,22 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#dataUpload {
-  display: flex;
-  justify-content: center;
-  .el-form {
+.insertData {
+  box-sizing: border-box;
+  width: 100%;
+  /* padding-top: -60px; */
+
+  /* margin-top: -60px; */
+  padding-top: 60px;
+  #dataUpload {
     display: flex;
-    flex-wrap: wrap;
-    .el-form-item {
-      width: 30%;
+    justify-content: center;
+    .el-form {
+      display: flex;
+      flex-wrap: wrap;
+      .el-form-item {
+        width: 30%;
+      }
     }
   }
 }

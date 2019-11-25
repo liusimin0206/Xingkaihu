@@ -90,11 +90,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-// .dataScreening {
-//   height: 100%;
-//   .header {
-//     height: 40px;
-//     line-height: 40px;
-//   }
-// }
+.dataScreening {
+  box-sizing: border-box;
+  width: 100%;
+  /* padding-top: -60px; */
+
+  /* margin-top: -60px; */
+  padding-top: 60px;
+}
 </style>

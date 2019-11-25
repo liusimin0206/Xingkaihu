@@ -1,5 +1,5 @@
 <template>
-  <div>rawData+ {{ activeTable }}</div>
+  <div class="rawData">rawData+ {{ activeTable }}</div>
 </template>
 
 <script>
@@ -16,4 +16,13 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.rawData {
+  box-sizing: border-box;
+  width: 100%;
+  /* padding-top: -60px; */
+
+  /* margin-top: -60px; */
+  padding-top: 60px;
+}
+</style>
