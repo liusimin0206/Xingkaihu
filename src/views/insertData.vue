@@ -1,5 +1,5 @@
 <template>
-  <div class="insertData">
+  <div id="insertData">
     <h1>insertData +{{ activeTable }}</h1>
     <div id="dataUpload">
       <div>
@@ -71,7 +71,8 @@
         :key="item[0]"
         :prop="item[0]"
         :label="item[1]"
-        width="180"
+        show-overflow-tooltip
+        width="130"
       ></el-table-column>
       <el-table-column label="操作" width="80" fixed="right">
         <template slot-scope="scope">
@@ -252,22 +253,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.insertData {
-  box-sizing: border-box;
-  width: 100%;
-  /* padding-top: -60px; */
-
-  /* margin-top: -60px; */
-  padding-top: 60px;
-  #dataUpload {
+#dataUpload {
+  display: flex;
+  justify-content: center;
+  .el-form {
     display: flex;
-    justify-content: center;
-    .el-form {
-      display: flex;
-      flex-wrap: wrap;
-      .el-form-item {
-        width: 30%;
-      }
+    flex-wrap: wrap;
+    .el-form-item {
+      width: 30%;
     }
   }
 }

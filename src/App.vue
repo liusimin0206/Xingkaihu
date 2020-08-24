@@ -1,41 +1,45 @@
 <template>
-  <div id="app">
-    <div id="firstHeader">兴凯湖国家地质公园地质遗迹数据管理系统</div>
-    <div id="main">
-      <el-aside class="left" width="300px">
-        <el-menu :default-active="currentTable">
-          <!-- 类似的添加导航菜单 index传值代表路由跳转 -->
-          <el-menu-item index="首页" @click="changeTable('首页')">
-            <i class="el-icon-s-home"></i>
-            <span slot="title">首页</span>
-          </el-menu-item>
-          <el-submenu
-            v-for="item in AllTableNames"
-            :key="item.classname"
-            :index="item.classname"
+  <div class="test">
+    <div id="app">
+      <el-menu
+        class="left"
+        :default-active="currentTable ? currentTable : '/'"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b"
+        unique-opened
+        :collapse="isCollapse"
+      >
+        <!-- 类似的添加导航菜单 index传值代表路由跳转 -->
+        <el-menu-item index="/" @click="changeTable('首页')">
+          <i class="el-icon-s-home"></i>
+          <span slot="title">首页</span>
+        </el-menu-item>
+        <el-submenu
+          v-for="item in AllTableNames"
+          :key="item.classname"
+          :index="item.classname"
+        >
+          <template slot="title">
+            <i class="el-icon-menu"></i>
+            <span>{{ item.classname }}</span>
+          </template>
+          <el-menu-item
+            v-for="name in item.tableNames"
+            :key="name"
+            :index="name"
+            @click="changeTable(name)"
+            >{{ name }}</el-menu-item
           >
-            <template slot="title">
-              <i class="el-icon-menu"></i>
-              <span>{{ item.classname }}</span>
-            </template>
-            <el-menu-item
-              v-for="name in item.tableNames"
-              :key="name"
-              :index="name"
-              @click="changeTable(name)"
-              >{{ name }}</el-menu-item
-            >
-          </el-submenu>
-        </el-menu>
-      </el-aside>
+        </el-submenu>
+      </el-menu>
       <div class="right">
         <Main
           class="second-header"
           :currentTable="currentTable"
           v-if="this.$route.name !== 'home'"
         ></Main>
-
-        <router-view />
+        <router-view class="router-view" />
       </div>
     </div>
   </div>
@@ -93,7 +97,8 @@ export default {
             "农药化肥施用情况调查"
           ]
         }
-      ]
+      ],
+      isCollapse: false
     };
   },
   computed: {
@@ -128,51 +133,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  color: #2c3e50;
+.test {
   height: 100%;
-  #firstHeader {
-    background-color: #333;
-    color: #eee;
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    z-index: 9;
-  }
-  #main {
-    padding-top: 60px;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  #app {
     height: 100%;
+    box-sizing: border-box;
+
     .left {
       position: fixed;
-      width: 300px;
       height: 100%;
-      display: inline-block;
+      text-align: left;
+      width: 280px;
+      .el-menu {
+        height: 100%;
+      }
     }
     .right {
       box-sizing: border-box;
       width: 100%;
       height: 100%;
-      padding-left: 300px;
+      padding-left: 280px;
       .second-header {
         position: fixed;
         z-index: 9;
         width: 100%;
       }
+      .router-view {
+        padding-top: 60px;
+        height: 100%;
+        box-sizing: border-box;
+      }
     }
   }
-  .el-aside {
-    background-color: rgb(255, 255, 255);
-    color: #333;
-    text-align: center;
-  }
-}
-
-.el-container {
-  height: 100%;
 }
 </style>

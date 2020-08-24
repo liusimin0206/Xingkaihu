@@ -1,0 +1,130 @@
+[
+    {
+        "count": 1,
+        "value": {
+            "pointname": "DXSJCJ-01",
+            "longitude": "133°03′01.21″",
+            "latitude": "45°09′17.75″"
+        }
+    },
+    {
+        "count": 4,
+        "value": {
+            "pointname": "DXSJCJ-02",
+            "longitude": "133°03′37.21″",
+            "latitude": "45°10′53.99″"
+        }
+    },
+    {
+        "count": 7,
+        "value": {
+            "pointname": "DXSJCJ-03",
+            "longitude": "132°58′31.33″",
+            "latitude": "45°08′13.53″"
+        }
+    },
+    {
+        "count": 10,
+        "value": {
+            "pointname": "DXSJCJ-04",
+            "longitude": "132°57′63.03″",
+            "latitude": "45°11′36.13″"
+        }
+    },
+    {
+        "count": 13,
+        "value": {
+            "pointname": "DXSJCJ-05",
+            "longitude": "132°53′36.44″",
+            "latitude": "45°15′16.59″"
+        }
+    },
+    {
+        "count": 16,
+        "value": {
+            "pointname": "DXSJCJ-06",
+            "longitude": "132°58′22.32″",
+            "latitude": "45°15′46.59″"
+        }
+    },
+    {
+        "count": 19,
+        "value": {
+            "pointname": "DXSJCJ-07",
+            "longitude": "133°04′23.78″",
+            "latitude": "45°78′46.72″"
+        }
+    },
+    {
+        "count": 22,
+        "value": {
+            "pointname": "DXSJCJ-08",
+            "longitude": "133°47′22.37″",
+            "latitude": "45°15′34.76″"
+        }
+    },
+    {
+        "count": 25,
+        "value": {
+            "pointname": "DXSJCJ-09",
+            "longitude": "132°53′08.95″",
+            "latitude": "45°23′23.16″"
+        }
+    },
+    {
+        "count": 28,
+        "value": {
+            "pointname": "DXSJCJ-10",
+            "longitude": "132°54′06.87″",
+            "latitude": "45°25′29.98″"
+        }
+    },
+    {
+        "count": 31,
+        "value": {
+            "pointname": "DXSJCJ-11",
+            "longitude": "132°45′02.86″",
+            "latitude": "45°25′52.84″"
+        }
+    },
+    {
+        "count": 34,
+        "value": {
+            "pointname": "DXSJCJ-12",
+            "longitude": "132°20′10.18″",
+            "latitude": "45°20′54.84″"
+        }
+    },
+    {
+        "count": 37,
+        "value": {
+            "pointname": "DXSJCJ-13",
+            "longitude": "132°19′53.45″",
+            "latitude": "45°22′12.96″"
+        }
+    },
+    {
+        "count": 40,
+        "value": {
+            "pointname": "DXSJCJ-14",
+            "longitude": "132°08′24.62″",
+            "latitude": "45°20′02.56″"
+        }
+    },
+    {
+        "count": 43,
+        "value": {
+            "pointname": "DXSJCJ-15",
+            "longitude": "132°06′52.01″",
+            "latitude": "45°22′10.23″"
+        }
+    },
+    {
+        "count": 46,
+        "value": {
+            "pointname": "DXSJCJ-16",
+            "longitude": "132°05′44.49″",
+            "latitude": "45°24′02.47″"
+        }
+    }
+]

@@ -1,6 +1,7 @@
 const fs = require("fs");
+const ENV = process.env.NODE_ENV;
 module.exports = {
-  publicPath: "./",
+  publicPath: ENV === "development" ? "" : "./dist/",
   devServer: {
     // proxy: {
     //   "/homework1_4_war": {
@@ -28,6 +29,7 @@ module.exports = {
       // });
       app.get("/XingKaiHu1/*", (req, res) => {
         let url = req.originalUrl;
+
         if (url.indexOf("satellite") !== -1) {
           fs.readFile(`mock${url}`, function(err, data) {
             res.writeHead(200, { "Content-Type": "image/jpg" });
@@ -37,6 +39,11 @@ module.exports = {
           // console.log(url);
           fs.readFile(`mock${url}`, function(err, data) {
             res.writeHead(200, { "Content-Type": "image/png" });
+            res.end(data);
+          });
+        } else if (url.indexOf("originalpaper") !== -1) {
+          fs.readFile(`mock${url}`, function(err, data) {
+            res.writeHead(200, { "Content-Type": "image/jpg" });
             res.end(data);
           });
         } else {

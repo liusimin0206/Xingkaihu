@@ -3,8 +3,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
   components: {},
   data() {
@@ -18,3 +16,8 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.home {
+  padding-top: 0 !important;
+}
+</style>

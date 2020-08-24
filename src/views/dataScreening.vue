@@ -2,14 +2,15 @@
   <div class="dataScreening">
     <h1 class="header">{{ activeTable }}</h1>
     <el-table :data="currentPageTableData" border :empty-text="defaultresult">
-      <el-table-column type="index" :index="indexMethod" width="50" fixed>
+      <el-table-column type="index" :index="indexMethod" width="40" fixed fit>
       </el-table-column>
       <el-table-column
         v-for="item in tabelHeader"
         :key="item[0]"
         :prop="item[0]"
         :label="item[1]"
-        width="180"
+        show-overflow-tooltip
+        width="130"
       ></el-table-column>
     </el-table>
     <el-pagination
@@ -90,12 +91,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.dataScreening {
-  box-sizing: border-box;
-  width: 100%;
-  /* padding-top: -60px; */
-
-  /* margin-top: -60px; */
-  padding-top: 60px;
-}
+// .dataScreening {
+//   height: 100%;
+//   .header {
+//     height: 40px;
+//     line-height: 40px;
+//   }
+// }
 </style>
