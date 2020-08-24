@@ -64,19 +64,19 @@ export default {
       });
       // 添加底图服务
       this.baseMap = this.$L.tileLayer(
-        "/XingKaiHu1/maptile/satellite/{z}/{x}/{y}.jpg"
+        "./XingKaiHu1/maptile/satellite/{z}/{x}/{y}.jpg"
       );
       this.map.addLayer(this.baseMap);
       // 添加覆盖图层
       this.overLayer = this.$L.tileLayer(
-        "/XingKaiHu1/maptile/overlay/{z}/{x}/{y}.png"
+        "./XingKaiHu1/maptile/overlay/{z}/{x}/{y}.png"
       );
       this.map.addLayer(this.overLayer);
     },
     getPoints() {
       this.$http({
         method: "get",
-        url: `/XingKaiHu1/mapServlet?tableidjs=${this.activeTable}`
+        url: `./XingKaiHu1/mapServlet?tableidjs=${this.activeTable}`
       })
         .then(res => {
           // 去重 后端返回的点是根据bottleid获取的 但是前端显示上会有重叠 用sampleid做一下去重
@@ -125,7 +125,8 @@ export default {
       return Math.abs(du) + (Math.abs(fen) / 60 + Math.abs(miao) / 3600);
     },
     getTableHeader() {
-      let tbHeadUrl = "/XingKaiHu1/TbHeadServlet?tableidjs=" + this.activeTable;
+      let tbHeadUrl =
+        "./XingKaiHu1/TbHeadServlet?tableidjs=" + this.activeTable;
       this.$http.get(tbHeadUrl).then(res => {
         this.tabelHeader = res.data;
       });
@@ -134,7 +135,7 @@ export default {
       this.params.tableidjs = this.activeTable;
       console.log(this.params);
       this.$http
-        .get("/XingKaiHu1/jsonServlet", { params: this.params })
+        .get("./XingKaiHu1/jsonServlet", { params: this.params })
         .then(res => {
           this.tableData = [];
           let arr = res.data;
